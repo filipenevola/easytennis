@@ -13,3 +13,5 @@ accounts-password
 iron:router
 d0minikk:materialize-meteor
 wizonesolutions:underscore-string
+accounts-facebook
+service-configuration
