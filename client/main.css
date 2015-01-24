@@ -1,0 +1,12 @@
+body {
+    background-color: #eeeeee;
+}
+
+.menu-item {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.content {
+    padding: 20px;
+}

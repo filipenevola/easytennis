@@ -1,0 +1,18 @@
+<template name="ApplicationLayout">
+        <nav>
+            <div class="nav-wrapper teal lighten-2">
+                <a href="#" class="brand-logo" style="padding-left: 15px;">easytennis</a>
+                <ul id="nav-mobile" class="right side-nav">
+                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'places'}}">Places</a></li>
+                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'players'}}">Players</a></li>
+                </ul>
+                <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </nav>
+
+        <div class="row content">
+            <div class="col s12">
+                {{> Router}}
+            </div>
+        </div>
+</template>
