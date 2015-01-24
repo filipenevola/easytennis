@@ -6,20 +6,17 @@ Template.Register.events({
         var password = t.find('#account-password').value;
 
         if(_.isBlank(username) || _.isBlank(email) || _.isBlank(password)) {
-            toast('Please, fill all fields!', 4000);
+            toast('Ops! Please, fill all fields!', 4000);
             return false;
         }
 
         Accounts.createUser({username: username, email: email, password: password}, function (err) {
             if (err) {
-                // Inform the user that account creation failed
-                toast('Problem!', 4000);
-                console.log('problem');
+                toast('Ops! ' + err.message, 4000);
             } else {
                 // Success. Account has been created and the user
                 // has logged in successfully.
             }
-
         });
 
         return false;
