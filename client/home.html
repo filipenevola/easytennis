@@ -1,6 +1,6 @@
 <template name="Home">
     {{#if currentUser}}
-        Hello
+        Hello {{> Username}}
     {{/if}}
     {{#unless currentUser}}
         {{> Register }}

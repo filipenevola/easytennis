@@ -15,3 +15,5 @@ d0minikk:materialize-meteor
 wizonesolutions:underscore-string
 accounts-facebook
 service-configuration
+accounts-twitter
+accounts-google

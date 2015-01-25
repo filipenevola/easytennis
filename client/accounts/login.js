@@ -24,5 +24,15 @@ Template.Login.events({
     'click #login-facebook': function (e, t) {
         e.preventDefault();
         Meteor.loginWithFacebook();
+    },
+
+    'click #login-twitter': function (e, t) {
+        e.preventDefault();
+        Meteor.loginWithTwitter();
+    },
+
+    'click #login-google': function (e, t) {
+        e.preventDefault();
+        Meteor.loginWithGoogle();
     }
 });
