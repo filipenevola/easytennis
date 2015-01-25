@@ -13,10 +13,31 @@ To run this project and use Facebook login you need to create a config file like
             service: "facebook"
         }, {
             $set: {
-                appId: "XXX",
-                secret: "XXX"
+                appId: "xxx",
+                secret: "xxx"
+            }
+        });
+
+        Accounts.loginServiceConfiguration.upsert({
+            service: "twitter"
+        }, {
+            $set: {
+                consumerKey: "xxx",
+                secret: "xxx"
+            }
+        });
+
+        Accounts.loginServiceConfiguration.upsert({
+            service: "google"
+        }, {
+            $set: {
+                clientId: "xxx",
+                secret: "xxx",
+                loginStyle: "popup"
             }
         });
     });
+
+
 
 
