@@ -1,5 +1,4 @@
-
-Accounts.onCreateUser(function(options, user){
+Accounts.onCreateUser(function (options, user) {
 
     var userProperties = {
         profile: options.profile || {},

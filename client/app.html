@@ -1,10 +1,10 @@
 <template name="ApplicationLayout">
         <nav>
             <div class="nav-wrapper teal lighten-2">
-                <a href="#" class="brand-logo" style="padding-left: 15px;">Easy Tennis</a>
+                <a href="{{pathFor 'Dashboard'}}" class="brand-logo" style="padding-left: 15px;">Easy Tennis</a>
                 <ul id="nav-mobile" class="right side-nav">
-                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'places'}}">Places</a></li>
-                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'players'}}">Players</a></li>
+                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'Places'}}">Places</a></li>
+                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'Players'}}">Players</a></li>
                     {{> Logout }}
                     {{> Picture }}
                 </ul>

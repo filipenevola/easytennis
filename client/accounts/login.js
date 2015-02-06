@@ -17,8 +17,8 @@ Template.Login.events({
             if (err) {
                 toast('Ops! ' + err.reason, 4000);
             } else {
-                // Success. Account has been created and the user
-                // has logged in successfully.
+                Router.go('Dashboard');
+                return true;
             }
         });
 
