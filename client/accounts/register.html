@@ -1,11 +1,12 @@
 <template name="Register">
-    <div class="row">
-        <form id="register-form" class="col s12">
-            <!--fake for google chrome autofill-->
-            <input type="email" id="fake-email" style="display: none;">
-            <!--fake for google chrome autofill-->
-            <input type="password" id="fake-password" style="display: none;">
-            <div>
+    <form id="register-form">
+        <!--fake for google chrome autofill-->
+        <input type="email" id="fake-email" style="display: none;">
+        <!--fake for google chrome autofill-->
+        <input type="password" id="fake-password" style="display: none;">
+        <li>
+            <div class="collapsible-header"><i class="mdi-content-add-circle-outline"></i>Faça seu cadastro!</div>
+            <div class="collapsible-body collapsible-pad">
                 <div class="input-field col s12">
                     <i class="mdi-communication-email prefix"></i>
                     <input type="email" id="account-email">
@@ -14,10 +15,10 @@
                 <div class="input-field col s12">
                     <i class="mdi-communication-vpn-key prefix"></i>
                     <input type="password" id="account-password"/>
-                    <label for="account-password">Password</label>
+                    <label for="account-password">Senha</label>
                 </div>
-                <a id="create-account" class="waves-effect waves-light btn">Register</a>
+                <a id="create-account" class="waves-effect waves-light btn">Registrar</a>
             </div>
-        </form>
-    </div>
+        </li>
+    </form>
 </template>

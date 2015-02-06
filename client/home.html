@@ -1,13 +1,12 @@
 <template name="Home">
     {{#if currentUser}}
-        Hello {{> Identification}}
+    Olá {{> Identification}}
     {{/if}}
     {{#unless currentUser}}
+    <ul class="collapsible" data-collapsible="accordion">
         {{> Register }}
-
-        <hr style=""/>
-        <br/>
-
         {{> Login }}
+    </ul>
+    {{> LoadCollapsible }}
     {{/unless}}
 </template>

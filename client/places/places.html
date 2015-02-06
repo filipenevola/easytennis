@@ -1,0 +1,71 @@
+<template name="Places">
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="mdi-content-add-circle-outline"></i>Novo Lugar</div>
+            <div class="collapsible-body collapsible-pad">
+                {{> InsertPlace }}
+            </div>
+        </li>
+        <li class="active">
+            <div class="collapsible-header"><i class="mdi-maps-place"></i>Lugares</div>
+            <div class="collapsible-body collapsible-pad collapsible-active">
+                {{> PlaceList }}
+            </div>
+        </li>
+    </ul>
+    {{> LoadCollapsible }}
+</template>
+
+<template name="InsertPlace">
+    {{> quickForm collection="Places" id="InsertPlace" type="insert" omitFields="user, createDate"}}
+</template>
+
+<template name="PlaceList">
+
+    <table class="responsive-table bordered centered">
+        <thead>
+        <tr>
+            <th data-field="name">Nome</th>
+            <th data-field="summary">Resumo</th>
+            <th data-field="courts">Quadras</th>
+            <th data-field="createDate">Criação</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {{#each places}}
+            {{> PlaceRow }}
+        {{/each}}
+        </tbody>
+    </table>
+</template>
+
+<template name="PlaceRow">
+    <tr>
+        <td>
+            {{name}}</td>
+        <td>{{summary}}</td>
+        <td>{{courts.length}}<br/><a class="waves-effect waves-light btn"><i class="mdi-content-add-circle-outline"></i></a></td>
+        <td>{{#if my}}{{> Picture}}{{/if}}<br/><span style="font-size: 0.8em;">({{timeFromNow createDate}})</span></td>
+    </tr>
+    {{#if isNotEmpty courts}}
+        <tr>
+            <td colspan="3">Courts</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+        </tr>
+
+        {{#each courts}}
+            {{> CourtRow }}
+        {{/each}}
+    {{/if}}
+
+</template>
+
+<template name="CourtRow">
+    <tr>
+        <td>{{name}}</td>
+    </tr>
+</template>

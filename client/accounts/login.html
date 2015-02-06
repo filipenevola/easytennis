@@ -1,33 +1,39 @@
 <template name="Login">
-    <div class="row">
-        <form id="login-form" class="col s12">
+        <form id="login-form">
             <!--fake for google chrome autofill-->
             <input type="email" id="fake-email" style="display: none;">
             <!--fake for google chrome autofill-->
             <input type="password" id="fake-password" style="display: none;">
 
-            <div>
-                <div class="input-field col s12">
-                    <i class="mdi-communication-email prefix"></i>
-                    <input type="email" id="login-email">
-                    <label for="login-email">Email</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="mdi-communication-vpn-key prefix"></i>
-                    <input type="password" id="login-password"/>
-                    <label for="login-password">Password</label>
-                </div>
-                <a id="login" class="waves-effect waves-light btn">Login</a>
-                {{#if isFacebookLoginAvailable}}
+            <li class="active">
+                <div class="collapsible-header"><i class="mdi-social-person-outline"></i>Entre com suas Redes Sociais!</div>
+                <div class="collapsible-body collapsible-pad collapsible-active">
+                    {{#if isFacebookLoginAvailable}}
                     <a id="login-facebook" class="waves-effect waves-light btn">Facebook</a>
-                {{/if}}
-                {{#if isTwitterLoginAvailable}}
+                    {{/if}}
+                    {{#if isTwitterLoginAvailable}}
                     <a id="login-twitter" class="waves-effect waves-light btn">Twitter</a>
-                {{/if}}
-                {{#if isGoogleLoginAvailable}}
+                    {{/if}}
+                    {{#if isGoogleLoginAvailable}}
                     <a id="login-google" class="waves-effect waves-light btn">Google</a>
-                {{/if}}
-            </div>
+                    {{/if}}
+                </div>
+            </li>
+            <li class="active">
+                <div class="collapsible-header"><i class="mdi-av-play-circle-outline"></i>Faça seu login!</div>
+                <div class="collapsible-body collapsible-pad collapsible-active">
+                    <div class="input-field col s12">
+                        <i class="mdi-communication-email prefix"></i>
+                        <input type="email" id="login-email">
+                        <label for="login-email">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="mdi-communication-vpn-key prefix"></i>
+                        <input type="password" id="login-password"/>
+                        <label for="login-password">Senha</label>
+                    </div>
+                    <a id="login" class="waves-effect waves-light btn">Entrar</a>
+                </div>
+            </li>
         </form>
-    </div>
 </template>

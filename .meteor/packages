@@ -17,5 +17,10 @@ service-configuration
 accounts-twitter
 accounts-google
 fastclick
-browser-policy
 meteorhacks:fast-render
+aldeed:simple-schema
+aldeed:autoform
+browser-policy
+meteorhacks:kadira
+mrt:moment
+jquery

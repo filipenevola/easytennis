@@ -10,3 +10,11 @@ body {
 .content {
     padding: 20px;
 }
+
+.collapsible-pad {
+    padding: 10px;
+}
+
+.collapsible-active {
+    display: block;
+}
