@@ -16,3 +16,6 @@ accounts-facebook
 service-configuration
 accounts-twitter
 accounts-google
+fastclick
+browser-policy
+meteorhacks:fast-render
