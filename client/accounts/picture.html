@@ -2,4 +2,7 @@
     {{#if profile.picture}}
         <img class="responsive-img circle" src="{{profile.picture}}" style="max-width: 50px;">
     {{/if}}
+    {{#unless profile.picture}}
+        {{> Identification }}
+    {{/unless}}
 </template>
