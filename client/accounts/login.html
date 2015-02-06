@@ -5,6 +5,7 @@
             <input type="email" id="fake-email" style="display: none;">
             <!--fake for google chrome autofill-->
             <input type="password" id="fake-password" style="display: none;">
+
             <div>
                 <div class="input-field col s12">
                     <i class="mdi-communication-email prefix"></i>
@@ -17,9 +18,15 @@
                     <label for="login-password">Password</label>
                 </div>
                 <a id="login" class="waves-effect waves-light btn">Login</a>
-                <a id="login-facebook" class="waves-effect waves-light btn">Facebook</a>
-                <a id="login-twitter" class="waves-effect waves-light btn">Twitter</a>
-                <a id="login-google" class="waves-effect waves-light btn">Google</a>
+                {{#if isFacebookLoginAvailable}}
+                    <a id="login-facebook" class="waves-effect waves-light btn">Facebook</a>
+                {{/if}}
+                {{#if isTwitterLoginAvailable}}
+                    <a id="login-twitter" class="waves-effect waves-light btn">Twitter</a>
+                {{/if}}
+                {{#if isGoogleLoginAvailable}}
+                    <a id="login-google" class="waves-effect waves-light btn">Google</a>
+                {{/if}}
             </div>
         </form>
     </div>

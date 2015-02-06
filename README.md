@@ -10,7 +10,7 @@ To run this project and use social login you need to create a config file like t
 
     Meteor.startup(function () {
         ServiceConfiguration.configurations.upsert({
-            service: "facebook"
+            service: FACEBOOK
         }, {
             $set: {
                 appId: "xxx",
@@ -19,7 +19,7 @@ To run this project and use social login you need to create a config file like t
         });
 
         Accounts.loginServiceConfiguration.upsert({
-            service: "twitter"
+            service: TWITTER
         }, {
             $set: {
                 consumerKey: "xxx",
@@ -28,7 +28,7 @@ To run this project and use social login you need to create a config file like t
         });
 
         Accounts.loginServiceConfiguration.upsert({
-            service: "google"
+            service: GOOGLE
         }, {
             $set: {
                 clientId: "xxx",

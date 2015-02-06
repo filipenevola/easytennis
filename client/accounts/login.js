@@ -1,10 +1,14 @@
+var isLoginServiceAvailable = function (serviceName) {
+    return ServiceConfiguration.configurations.find({service: serviceName}).count() > 0;
+};
+
 Template.Login.events({
     'click #login': function (e, t) {
         e.preventDefault();
         var email = t.find('#login-email').value;
         var password = t.find('#login-password').value;
 
-        if(_.isBlank(email) || _.isBlank(password)) {
+        if (_.isBlank(email) || _.isBlank(password)) {
             toast('Ops! Please, fill all fields!', 4000);
             return false;
         }
@@ -34,5 +38,17 @@ Template.Login.events({
     'click #login-google': function (e, t) {
         e.preventDefault();
         Meteor.loginWithGoogle();
+    }
+});
+
+Template.Login.helpers({
+    isFacebookLoginAvailable: function () {
+        return isLoginServiceAvailable(FACEBOOK);
+    },
+    isTwitterLoginAvailable: function () {
+        return isLoginServiceAvailable(TWITTER);
+    },
+    isGoogleLoginAvailable: function () {
+        return isLoginServiceAvailable(GOOGLE);
     }
 });
