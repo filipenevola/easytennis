@@ -9,8 +9,10 @@
                 </a>
                 <ul id="nav-mobile" class="right side-nav">
                     <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'Dashboard'}}"><i class="mdi-action-home"></i></a></li>
-                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'Places'}}">Lugares</a></li>
-                    <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'Players'}}">Jogadores</a></li>
+                    {{#if currentUser }}
+                        <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'Places'}}">Lugares</a></li>
+                        <li class="waves-effect waves-teal menu-item"><a href="{{pathFor 'Players'}}">Jogadores</a></li>
+                    {{/if}}
                     {{> Logout }}
                     {{> Picture }}
                 </ul>
