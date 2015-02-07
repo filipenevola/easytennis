@@ -5,4 +5,7 @@ Meteor.startup(function () {// server
     Meteor.publish('places', function () {
         return Places.find();
     });
+    Meteor.publish('courts', function () {
+        return Courts.find();
+    });
 });

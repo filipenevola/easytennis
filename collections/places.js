@@ -5,13 +5,13 @@ var Schemas = {};
 Schemas.Place = new SimpleSchema({
     name: {
         type: String,
-        label: "Name",
+        label: "Nome",
         max: 200,
         optional: false
     },
     summary: {
         type: String,
-        label: "Brief summary",
+        label: "Descrição",
         optional: true,
         max: 1000
     },
