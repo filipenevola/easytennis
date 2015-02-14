@@ -1,6 +1,8 @@
 <template name="Dashboard">
     {{#if currentUser}}
-    Olá {{> Identification}}
+        <div class="hello-user">
+            Olá {{> Identification}}
+        </div>
     {{/if}}
 
     {{> MyPlaces }}
@@ -10,7 +12,8 @@
     <ul class="collapsible" data-collapsible="accordion">
         <li class="active">
             <div class="collapsible-header">
-                <i class="mdi-maps-place"></i>Meus Lugares</div>
+                <i class="mdi-maps-place"></i>Meus Lugares
+            </div>
             <div class="collapsible-body collapsible-pad collapsible-active">
                 {{> MyPlaceList }}
             </div>

@@ -1,7 +1,7 @@
 <template name="Logout">
     {{#if currentUser}}
         <li class="waves-effect waves-teal menu-item">
-            <a id="logout">Sair</a>
+            <a href="{{pathFor 'Logout'}}">Sair</a>
         </li>
     {{/if}}
 </template>

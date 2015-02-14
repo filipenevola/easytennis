@@ -2,7 +2,6 @@ var isLoginServiceAvailable = function (serviceName) {
     return ServiceConfiguration.configurations.find({service: serviceName}).count() > 0;
 };
 
-
 var loginCallback = function (err) {
     if (err) {
         toast('Ops! ' + err.reason, 4000);
@@ -13,7 +12,7 @@ var loginCallback = function (err) {
 };
 
 Template.Login.events({
-    'click #login': function (e, t) {
+    'submit #login-form': function (e, t) {
         e.preventDefault();
         var email = t.find('#login-email').value;
         var password = t.find('#login-password').value;

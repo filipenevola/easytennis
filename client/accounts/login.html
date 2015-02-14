@@ -1,4 +1,4 @@
-<template name="Login">
+<template name="Login" xmlns="http://www.w3.org/1999/html">
         <form id="login-form">
             <!--fake for google chrome autofill-->
             <input type="email" id="fake-email" style="display: none;">
@@ -32,7 +32,7 @@
                         <input type="password" id="login-password"/>
                         <label for="login-password">Senha</label>
                     </div>
-                    <a id="login" class="waves-effect waves-light btn">Entrar</a>
+                    <input type="submit" id="login" class="waves-effect waves-light btn" value="Entrar"/>
                 </div>
             </li>
         </form>
