@@ -28,7 +28,8 @@ Schemas.Place = new SimpleSchema
                 geolocation: true
                 searchBox: true
                 autolocate: true
-                zoom: 8
+                googleMap:
+                    zoom: 8
 
     'location.lat':
         type: String

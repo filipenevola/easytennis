@@ -1,0 +1,51 @@
+<template name="Dashboard">
+    {{#if currentUser}}
+    Olá {{> Identification}}
+    {{/if}}
+
+    {{> MyPlaces }}
+</template>
+
+<template name="MyPlaces">
+    <ul class="collapsible" data-collapsible="accordion">
+        <li class="active">
+            <div class="collapsible-header">
+                <i class="mdi-maps-place"></i>Meus Lugares</div>
+            <div class="collapsible-body collapsible-pad collapsible-active">
+                {{> MyPlaceList }}
+            </div>
+        </li>
+    </ul>
+    {{> LoadCollapsible }}
+</template>
+
+<template name="MyPlaceList">
+
+    <table class="responsive-table bordered centered">
+        <thead>
+        <tr>
+            <th data-field="name">Nome</th>
+            <th data-field="summary">Resumo</th>
+            <th data-field="courts">Quadras</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {{#each myPlaces}}
+            {{> MyPlaceRow }}
+        {{/each}}
+        </tbody>
+    </table>
+</template>
+
+<template name="MyPlaceRow">
+    <tr>
+        <td>
+            {{name}}</td>
+        <td>{{summary}}</td>
+        <td>{{courts.length}}</td>
+        <td><a class="waves-effect waves-light btn exit-btn"><i class="mdi-action-exit-to-app"></i></a></td>
+    </tr>
+
+</template>
