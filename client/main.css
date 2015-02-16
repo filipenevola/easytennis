@@ -18,3 +18,9 @@ body {
 .collapsible-active {
     display: block;
 }
+
+.hello-user {
+    font-size: 1.2em;
+    color: #4db6ac;
+    text-shadow: #eeeeee;
+}

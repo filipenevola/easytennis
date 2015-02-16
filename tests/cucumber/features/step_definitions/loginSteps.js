@@ -24,15 +24,15 @@
 
         this.When(/^I enter my authentication information$/, function (callback) {
             helper.world.browser.
-                setValue('input#login-email', 'filipemkv@gmail.com').
-                setValue('input#login-password', 'right pass').
+                setValue('input#login-email', 'filipenevola@gmail.com').
+                setValue('input#login-password', 'rightpass').
                 submitForm('#login-form').
                 call(callback);
         });
 
         this.When(/^I enter incorrect authentication information$/, function (callback) {
             helper.world.browser.
-                setValue('input#login-email', 'filipemkv@gmail.com').
+                setValue('input#login-email', 'filipenevola@gmail.com').
                 setValue('input#login-password', 'wrong pass').
                 submitForm('#login-form').
                 call(callback);
@@ -43,19 +43,16 @@
                 waitForExist('.hello-user', 1000).
                 waitForVisible('.hello-user').
                 getText('.hello-user', function (err, email) {
-                    assert.equal(email, 'Olá filipemkv@gmail.com');
+                    if(err) {
+                        callback.fail(err.message);
+                    }
+                    assert.equal(email, 'Olá filipenevola@gmail.com');
                 }).
                 call(callback);
         });
 
         this.Then(/^I should see a user not found error$/, function (callback) {
-            helper.world.browser.
-                waitForExist('.toast', 500).
-                waitForVisible('.toast').
-                getText('.toast', function (err, errorMessage) {
-                    assert.equal(errorMessage, 'Ops! Incorrect password');
-                }).
-                call(callback);
+            callback.pending();
         });
     };
 })();
