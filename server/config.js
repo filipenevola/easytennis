@@ -21,7 +21,7 @@ Meteor.startup(function () {
         service: GOOGLE
     }, {
         $set: {
-            clientId: "64769902608-8nq556s8itvqdttm3l1stnqvhtdt64l4.apps.googleusercontent.com",
+            clientId: process.env.GOOGLE_ID,
             secret: process.env.GOOGLE_SECRET,
             loginStyle: "popup"
         }
