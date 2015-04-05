@@ -4,7 +4,7 @@ Meteor.startup(function () {
     }, {
         $set: {
             appId: "797526476981636",
-            secret: process.env.FACEBOOK_SECRET
+            secret: Meteor.settings.FACEBOOK_SECRET
         }
     });
 
@@ -13,7 +13,7 @@ Meteor.startup(function () {
     }, {
         $set: {
             consumerKey: "HH2wFHqsVYpvqC92R6W04qPw2",
-            secret: process.env.TWITTER_SECRET
+            secret: Meteor.settings.TWITTER_SECRET
         }
     });
 
@@ -21,8 +21,8 @@ Meteor.startup(function () {
         service: GOOGLE
     }, {
         $set: {
-            clientId: process.env.GOOGLE_ID,
-            secret: process.env.GOOGLE_SECRET,
+            clientId: Meteor.settings.GOOGLE_ID,
+            secret: Meteor.settings.GOOGLE_SECRET,
             loginStyle: "popup"
         }
     });
