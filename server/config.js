@@ -7,7 +7,7 @@ Meteor.startup(function () {
         service: FACEBOOK
     }, {
         $set: {
-            appId: "797526476981636",
+            appId: inProduction() ? process.env.FACEBOOK_ID : Meteor.settings.FACEBOOK_ID,
             secret: inProduction() ? process.env.FACEBOOK_SECRET : Meteor.settings.FACEBOOK_SECRET
         }
     });
@@ -16,7 +16,7 @@ Meteor.startup(function () {
         service: TWITTER
     }, {
         $set: {
-            consumerKey: "HH2wFHqsVYpvqC92R6W04qPw2",
+            consumerKey: inProduction() ? process.env.TWITTER_ID : Meteor.settings.TWITTER_ID,
             secret: inProduction() ? process.env.TWITTER_SECRET : Meteor.settings.TWITTER_SECRET
         }
     });
