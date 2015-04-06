@@ -6,38 +6,12 @@ https://trello.com/b/9Budr6t1/easy-tennis
 
 Do you want to contribute? Contact me in twitter @FilipeNevola or make a pull request
 
-To run this project and use social login you need to create a config file like this (server/config.js):
+To run: meteor --settings settings.json
 
-    Meteor.startup(function () {
-        ServiceConfiguration.configurations.upsert({
-            service: FACEBOOK
-        }, {
-            $set: {
-                appId: "xxx",
-                secret: "xxx"
-            }
-        });
-
-        Accounts.loginServiceConfiguration.upsert({
-            service: TWITTER
-        }, {
-            $set: {
-                consumerKey: "xxx",
-                secret: "xxx"
-            }
-        });
-
-        Accounts.loginServiceConfiguration.upsert({
-            service: GOOGLE
-        }, {
-            $set: {
-                clientId: "xxx",
-                secret: "xxx",
-                loginStyle: "popup"
-            }
-        });
-    });
-
-
-
-
+settings.json content is like this:
+{
+  "TWITTER_SECRET": "xxx2232x",
+  "FACEBOOK_SECRET": "x111xxx2321",
+  "GOOGLE_ID": "xasad-dsadsa.apps.googleusercontent.com",
+  "GOOGLE_SECRET": "dsdsad3132"
+}
