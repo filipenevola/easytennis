@@ -1,5 +1,5 @@
 dev build mobile
-meteor build ../easytennis-apk --debug --server 192.168.0.11:3000
+meteor build ../easytennis-mobile --debug --server https://easytennis.scalingo.io
 
 mobile-config.js
 http://docs.meteor.com/#/full/mobileconfigjs
