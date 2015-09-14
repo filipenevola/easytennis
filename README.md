@@ -1,20 +1,14 @@
-# easytennis
-App to make play tennis with others an easy task
+![](public/favicon-96x96.png)
 
-Stories:
-https://trello.com/b/9Budr6t1/easy-tennis
+# [Meteor Hunt](http://meteorhunt.meteor.com/)
 
-Do you want to contribute? Contact me in twitter @FilipeNevola or make a pull request
+A [Product Hunt](http://www.producthunt.com/apps/ios) clone built using [meteoric:meteor-ionic](https://github.com/meteoric/meteor-ionic). **Currently in progress**
 
-To run: meteor --settings settings.json
-
-settings.json content is like this:
+## Running the app
 
 ```
-{
-  "TWITTER_SECRET": "xxx2232x",
-  "FACEBOOK_SECRET": "x111xxx2321",
-  "GOOGLE_ID": "xasad-dsadsa.apps.googleusercontent.com",
-  "GOOGLE_SECRET": "dsdsad3132"
-}
+cp settings.json.example settings.json
+meteor --settings settings.json
 ```
+## License
+[MIT License](https://github.com/meteoric/meteorhunt/blob/master/LICENSE)

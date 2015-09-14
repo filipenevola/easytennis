@@ -1,27 +1,29 @@
 # Meteor packages used by this project, one per line.
-# Check this file (and the other files in this directory) into your repository.
 #
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
-coffeescript
-aldeed:collection2
-accounts-password
-iron:router
-d0minikk:materialize-meteor
-wizonesolutions:underscore-string
-accounts-facebook
 service-configuration
+accounts-meteor-developer
+momentjs:moment
+iron:router@1.0.0
+zimme:iron-router-active
+anti:fake
+reywood:publish-composite
+matb33:collection-hooks
+aldeed:collection2
+aldeed:autoform
+mrt:underscore-string-latest
+dburles:collection-helpers
+bengott:avatar
+meteoric:ionic-sass@0.3.0
+meteoric:ionicons-sass@0.1.7
+meteoric:ionic@0.1.19
+meteoric:autoform-ionic
+reactive-var
+meteorhacks:kadira
+accounts-facebook
 accounts-twitter
 accounts-google
-fastclick
-meteorhacks:fast-render
-aldeed:simple-schema
-aldeed:autoform
-meteorhacks:kadira
-mrt:moment
-jquery
-comerc:autoform-placecomplete
-yogiben:autoform-map
+accounts-password
