@@ -1,0 +1,27 @@
+<template name="signIn">
+  {{#ionModal title=""}}
+
+    <div class="padding text-center sign-in-modal">
+      <p>
+        <img src="/favicon-160x160.png" width=80 height=80 />
+        <br>
+        <strong>Hey! Please sign in to do that :)</strong>
+      </p>
+      <p>
+          {{#if isFacebookLoginAvailable}}
+              <a id="login-facebook" style="cursor: pointer;"><img src="/images/facebook-signin.png" width=250 /></a>
+              <br/>
+          {{/if}}
+          {{#if isTwitterLoginAvailable}}
+              <a id="login-twitter" style="cursor: pointer;"><img src="/images/twitter-signin.png" width=250 /></a>
+              <br/>
+          {{/if}}
+          {{#if isGoogleLoginAvailable}}
+              <a id="login-google" style="cursor: pointer;"><img src="/images/google-signin.png" width=250 /></a>
+              <br/>
+          {{/if}}
+      </p>
+    </div>
+
+  {{/ionModal}}
+</template>
