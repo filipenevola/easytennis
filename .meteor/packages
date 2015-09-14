@@ -20,7 +20,6 @@ fastclick
 meteorhacks:fast-render
 aldeed:simple-schema
 aldeed:autoform
-browser-policy
 meteorhacks:kadira
 mrt:moment
 jquery
